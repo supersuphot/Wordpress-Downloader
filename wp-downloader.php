@@ -6,9 +6,9 @@
  * This script automates the process of downloading the latest version of WordPress,
  * extracting it on your server, and preparing it for installation.
  *
- * @author Suphot
+ * @author suhot.s@gmail.com
  * @license MIT License
- * @link https://github.com/yourusername/wordpress-downloader
+ * @link https://github.com/supersuphot/Wordpress-Downloader
  */
 
 if ($_GET OR $_POST)

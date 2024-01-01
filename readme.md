@@ -10,13 +10,13 @@ WordPress Downloader is a PHP script designed to streamline the process of obtai
 ## Usage
 
 1. **Download the Script:**
-   - Obtain the `wordpress-downloader.php` script.
+   - Obtain the `wp-downloader.php` script.
 
 2. **Upload to Your Server:**
-   - Upload the `wordpress-downloader.php` script to your web server's root directory.
+   - Upload the `wp-downloader.php` script to your web server's root directory.
 
 3. **Access the Script:**
-   - Open your web browser and navigate to `http://yourdomain.com/wordpress-downloader.php`.
+   - Open your web browser and navigate to `http://yourdomain.com/wp-downloader.php`.
 
 4. **Follow the Instructions:**
    - The script will guide you through downloading and extracting the latest WordPress version.
