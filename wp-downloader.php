@@ -17,7 +17,7 @@ if ($_GET OR $_POST)
 	{
 		$url = empty($_REQUEST['url']) ? '' : $_REQUEST['url'] ;
 
-		if (empty($url)) throw new Exception('A WordPress release link is required, it is recommended that you use the latest WordPress Zip link: http://wordpress.org/latest.zip');
+		if (empty($url)) throw new Exception('A WordPress release link is required, it is recommended that you use the latest WordPress Zip link: https://wordpress.org/latest.zip');
 
 		$keep_wordpress_folder = !empty($_REQUEST['kwf']) ? TRUE : FALSE ;
 
@@ -26,7 +26,7 @@ if ($_GET OR $_POST)
 
 		$file = 'wordpress.zip';
 
-		file_put_contents($file, file_get_contents('http://wordpress.org/latest.zip'));
+		file_put_contents($file, file_get_contents('https://wordpress.org/latest.zip'));
 
 		if (!file_exists($file)) throw new Exception('Zip file not downloaded');
 
@@ -64,7 +64,7 @@ if ($_GET OR $_POST)
 
 		if ($delete_self)
 		{
-			unlink('./wp-installer.php');
+			unlink('./wp-downloader.php');
 		}
 
 		$status = array
@@ -133,14 +133,14 @@ function recursive_remove($src)
 
 // get the latest wordpress version
 $version = '';
-$contents = @file_get_contents('http://wordpress.org/download/');
+$contents = @file_get_contents('https://wordpress.org/download/');
 if (!empty($contents))
 {
 	preg_match('/download-button.*>(.*)<\/a/iUS',$contents,$m);
 	$version = trim(str_ireplace(array('&nbsp;','download','wordpress'),'',strip_tags($m[1])));
 }
 
-$url = !isset($_REQUEST['url']) ? 'http://wordpress.org/latest.zip' : $_REQUEST['url'] ;
+$url = !isset($_REQUEST['url']) ? 'https://wordpress.org/latest.zip' : $_REQUEST['url'] ;
 
 $kwf = (isset($_REQUEST['kwf']) AND $_REQUEST['kwf']==1) ? ' checked="checked"' : '' ;
 
@@ -180,7 +180,7 @@ $ds = (empty($_REQUEST['ds']) OR (isset($_REQUEST['ds']) AND $_REQUEST['ds']==1)
 		<input style="width:99%" type="text" name="url" value="<?php echo $url; ?>"/><br/>
 		<span>Copy and paste a valid WordPress Zip file link<?php if ($version): ?>, latest WordPress release is <strong><?php echo $version; ?></strong><?php endif; ?></span></p>
 
-		<p>If you need a <a href="http://wordpress.org/download/release-archive/" target="_blank">different WordPress version</a>, browse for the release you want and copy the Zip file link location by right-clicking (<em>or control-clicking</em>) the <code>zip</code> link and choosing "Copy Link Location", paste the link below...</p>
+		<p>If you need a <a href="https://wordpress.org/download/releases/" target="_blank">different WordPress version</a>, browse for the release you want and copy the Zip file link location by right-clicking (<em>or control-clicking</em>) the <code>zip</code> link and choosing "Copy Link Location", paste the link below...</p>
 
 		<p><input type="checkbox" name="kwf" value="1"<?php echo $kwf; ?>> Keep <code>wordpress</code> folder after Zip extraction?</p>
 
