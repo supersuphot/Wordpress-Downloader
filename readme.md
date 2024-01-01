@@ -1,3 +1,5 @@
+![Screenshot](screenshot.png)
+
 # WordPress Downloader
 
 WordPress Downloader is a PHP script designed to streamline the process of obtaining the latest version of WordPress, downloading it, and extracting it on your server, making it ready for installation.
@@ -20,7 +22,6 @@ WordPress Downloader is a PHP script designed to streamline the process of obtai
 
 4. **Follow the Instructions:**
    - The script will guide you through downloading and extracting the latest WordPress version.
-   - Provide any necessary information, such as database credentials.
 
 5. **Complete Installation:**
    - Once the script finishes, visit your domain to complete the WordPress installation.
